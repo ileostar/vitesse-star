@@ -8,6 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "commit": "git add . && git-cz",
+    "push": "git push",
     "prepare": "husky install",
     "lint": "eslint ."
   },
