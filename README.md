@@ -1,5 +1,7 @@
 # Vue3+Vite+Alova+TS
 
+![Alt text](./public/image.png)
+
 ## 特性
 
 - [拆箱即用](https://github.com/ileostar/vue3-vite-ts-alova)
