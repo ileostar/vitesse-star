@@ -11,6 +11,7 @@
     "build:pro": "vue-tsc --noEmit && vite build --mode pro",
     "preview": "vite preview",
     "test": "vitest",
+    "typecheck": "vue-tsc --noEmit",
     "commit": "git add . && git-cz",
     "push": "git push",
     "prepare": "husky install",
