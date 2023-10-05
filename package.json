@@ -56,7 +56,7 @@
     "stylelint-order": "^6.0.3",
     "taze": "^0.11.3",
     "typescript": "^5.0.2",
-    "unocss": "^0.56.4",
+    "unocss": "^0.56.5",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-icons": "^0.17.0",
     "unplugin-vue-components": "^0.25.2",
