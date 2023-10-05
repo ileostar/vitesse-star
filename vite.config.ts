@@ -53,6 +53,7 @@ export default defineConfig((_mode: ConfigEnv)=>{
         imports: [
           'vue',
           'pinia',
+          '@vueuse/core',
           VueRouterAutoImports,
           {
             'vue-router/auto': ['useLink']

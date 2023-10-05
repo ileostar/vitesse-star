@@ -9,7 +9,7 @@
 - 📦拆箱即用，结合了 Vue3、Vite、Alova 和 TypeScript
 - 🕸自动配置路由，使用 unplugin-vue-router 插件自动生成路由
 - 🥝自动引入，使用 unplugin-auto-import 插件实现组件自动引入
-- 🦢集成 UnoCSS，提供轻量级的样式解决方案]
+- ✨集成 UnoCSS，提供轻量级的样式解决方案
 - 🍀集成 Vitest，用于项目的单元测试
 - 🙈使用 Alova 实现网络请求
 - 🍍使用 Pinia 进行状态管理
@@ -33,7 +33,7 @@
 克隆项目到本地：
 
 ``` bash
-git clone https://github.com/ileostar/vue3-vite-ts-alova.git
+git clone https://github.com/ileostar/vue3-star.git
 ```
 
 进入项目目录：
@@ -52,7 +52,7 @@ pnpm install
 
 ``` bash
 
-npm run dev
+pnpm run dev
 ```
 
 打开浏览器，访问 http://localhost:5173 即可查看项目运行效果。
@@ -67,11 +67,13 @@ npm run dev
 
 ## 自动引入组件
 
-该项目使用 unplugin-auto-import 插件来实现组件的自动引入。你可以在 src/main.ts 中修改自动引入的规则和配置。
+该项目使用 unplugin-auto-import 插件来实现组件的自动引入。你可以在 vite.config.ts 中修改自动引入的规则和配置。
+
+**即定义组件直接使用即可，无需手动引入**
 
 ## 状态管理
 
-该项目使用 Pinia 进行状态管理。你可以在 src/store 目录下创建自己的状态模块，并在需要的组件中引入并使用它们。
+该项目使用 Pinia 进行状态管理。你可以在 src/stores 目录下创建自己的状态模块，并在需要的组件中引入并使用它们。
 
 ## 运行测试
 
