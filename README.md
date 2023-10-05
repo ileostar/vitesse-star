@@ -13,8 +13,11 @@
 - 🍀集成 Vitest，用于项目的单元测试
 - 🙈使用 Alova 实现网络请求
 - 🍍使用 Pinia 进行状态管理
+- 📌使用husky+lint-staged规范git commit
 
 ## 学习
+
+### 架构相关
 
 - [Vue](https://vuejs.org/)
 - [Vite](https://vitejs.dev)
@@ -23,6 +26,14 @@
 - [Alova](https://alova.js.org/zh-CN/)
 - [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
 - [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)
+
+### 规范相关
+
+- [husky](https://github.com/typicode/husky)
+- [lint-staged](https://github.com/typicode/husky)
+- [eslint](http://eslint.cn/)
+- [commitizen](https://github.com/commitizen/cz-cli)
+- [cz-emoji](https://github.com/ngryman/cz-emoji)
 
 ## 项目介绍
 
