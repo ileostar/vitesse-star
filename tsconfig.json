@@ -11,7 +11,8 @@
     },
     "types": [
       "vite/client",
-      "@alova/adapter-axios"
+      "@alova/adapter-axios",
+      "unplugin-vue-macros/macros-global"
     ],
     "resolveJsonModule": true,
     "allowJs": true,
@@ -22,12 +23,6 @@
     "noUnusedLocals": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/**/*.d.ts",
-    "types/**/*.d.ts",
-    "build/**/*.d.ts",
-    "./auto-imports.d.ts"
-  ],
   "exclude": [
     "dist",
     "node_modules"
