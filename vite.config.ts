@@ -14,8 +14,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 
 // https://vitejs.dev/config/
-export default defineConfig((_mode: ConfigEnv)=>{
-
+export default defineConfig((_mode: ConfigEnv) => {
   return {
     resolve: {
       alias: {
@@ -23,7 +22,7 @@ export default defineConfig((_mode: ConfigEnv)=>{
       },
       extensions: ['.js', '.json', '.ts'],
     },
-    
+
     plugins: [
       // https://github.com/vue-macros/vue-macros
       VueMacros({
@@ -38,10 +37,10 @@ export default defineConfig((_mode: ConfigEnv)=>{
           }),
         },
       }),
-  
+
       // https://github.com/hannoeru/vite-plugin-pages
       Pages(),
-  
+
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: [
@@ -50,7 +49,7 @@ export default defineConfig((_mode: ConfigEnv)=>{
           'vue-router',
           '@vueuse/core',
           {
-            alova: [     
+            alova: [
               'useRequest',
               'useWatcher',
               'useFetcher',
@@ -59,7 +58,7 @@ export default defineConfig((_mode: ConfigEnv)=>{
         ],
         resolvers: [
           ElementPlusResolver(),
-  
+
           // Auto import icon components
           // 自动导入图标组件
           IconsResolver(),
@@ -76,9 +75,9 @@ export default defineConfig((_mode: ConfigEnv)=>{
           filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
           globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
         },
-      
+
       }),
-  
+
       // https://github.com/antfu/vite-plugin-components
       Components({
         resolvers: [
@@ -94,7 +93,7 @@ export default defineConfig((_mode: ConfigEnv)=>{
         dts: true,
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
-  
+
       // https://github.com/antfu/unocss
       // see uno.config.ts for config
       UnoCSS(),
@@ -103,7 +102,7 @@ export default defineConfig((_mode: ConfigEnv)=>{
         autoInstall: true,
       }),
     ],
-    
+
     // https://github.com/vitest-dev/vitest
     test: {
       environment: 'jsdom',

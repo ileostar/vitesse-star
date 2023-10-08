@@ -1,4 +1,4 @@
-export const useIndexStore = defineStore('index', ()=>{
+export const useIndexStore = defineStore('index', () => {
   const count = ref(0)
   const msg = ref('Vite+Vue3+Pinia+UnoCSS+Alova+Vitest')
 

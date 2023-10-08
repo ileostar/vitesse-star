@@ -4,4 +4,3 @@
     <TheFooter />
   </main>
 </template>
-

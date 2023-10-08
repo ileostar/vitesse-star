@@ -3,7 +3,7 @@
 import { userAlova } from '..'
 
 // 获取用户信息
-export const getUserInfo = (id: string) => userAlova.Get(`/user/${  id}`)
+export const getUserInfo = (id: string) => userAlova.Get(`/user/${id}`)
 
 // 编辑用户信息
 export function editUserInfo(name: string, age: number, mobile: number) {
@@ -15,4 +15,4 @@ export function editUserInfo(name: string, age: number, mobile: number) {
 }
 
 // 移除用户
-export const removeUser = (id: string) => userAlova.Delete(`/user/${  id}`)
+export const removeUser = (id: string) => userAlova.Delete(`/user/${id}`)

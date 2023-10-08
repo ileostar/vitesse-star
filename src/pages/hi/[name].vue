@@ -12,7 +12,7 @@ const router = useRouter()
     <p text-sm op50>
       <em>Dynamic route!</em>
     </p>
-    
+
     <div>
       <button m-3 mt-8 text-sm btn @click="router.back()">
         Back
