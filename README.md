@@ -1,6 +1,6 @@
 # Vue3+Vite+Alova+TS
 
-![Alt text](D:\Software\Typora\public\image.png)
+![demo](public/image.png)
 
 ## 特性
 
