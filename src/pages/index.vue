@@ -39,26 +39,32 @@ const { count, msg } = storeToRefs(indexStore)
 
 <style scoped>
 .read-the-docs {
-  color: #888;
+  color: #888888;
 }
+
 .logo {
-  height: 8em;
   padding: 1.5em;
-  will-change: filter;
+  height: 8em;
   transition: filter 300ms;
+  will-change: filter;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.pinia:hover {
   filter: drop-shadow(0 0 2em #ffd552);
 }
+
 .logo.alova:hover {
   filter: drop-shadow(0 0 2em #00b0ed);
 }
+
 .logo.unocss:hover {
   filter: drop-shadow(0 0 2em #586c43);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

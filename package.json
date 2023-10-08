@@ -17,6 +17,7 @@
     "prepare": "husky install",
     "lint": "eslint .",
     "fix": "eslint src/**/*.*  --fix",
+    "style": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
     "up": "taze major -I"
   },
   "config": {
@@ -55,8 +56,9 @@
     "lint-staged": "^14.0.1",
     "pinia": "^2.1.6",
     "pinia-plugin-persistedstate": "^3.2.0",
+    "postcss-html": "^1.5.0",
     "stylelint": "^15.10.3",
-    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
     "stylelint-order": "^6.0.3",
     "taze": "^0.11.3",
     "typescript": "^5.2.2",

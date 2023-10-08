@@ -1,14 +1,17 @@
 {
   "extends": [
-    "stylelint-config-standard"
+    "stylelint-config-standard-vue"
   ],
   "plugins": [
     "stylelint-order"
   ],
+  "customSyntax": "postcss-html",
   "rules": {
-    "color-hex-case": "upper",
     "block-no-empty": true,
     "color-hex-length": "long",
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": []
+    }],
     "selector-pseudo-element-no-unknown": [true, {
       "ignorePseudoElements": ["v-deep"]
     }],
@@ -18,8 +21,6 @@
     "shorthand-property-no-redundant-values": true,
     "value-no-vendor-prefix": true,
     "property-no-vendor-prefix": true,
-    "number-leading-zero": "never",
-    "no-empty-first-line": true,
     "order/properties-order": [
       "position",
       "top",

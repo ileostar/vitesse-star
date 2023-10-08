@@ -91,12 +91,15 @@ devDependencies:
   pinia-plugin-persistedstate:
     specifier: ^3.2.0
     version: 3.2.0(pinia@2.1.6)
+  postcss-html:
+    specifier: ^1.5.0
+    version: 1.5.0
   stylelint:
     specifier: ^15.10.3
     version: 15.10.3(typescript@5.2.2)
-  stylelint-config-standard:
-    specifier: ^34.0.0
-    version: 34.0.0(stylelint@15.10.3)
+  stylelint-config-standard-vue:
+    specifier: ^1.0.0
+    version: 1.0.0(postcss-html@1.5.0)(stylelint@15.10.3)
   stylelint-order:
     specifier: ^6.0.3
     version: 6.0.3(stylelint@15.10.3)
@@ -5112,6 +5115,10 @@ packages:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: true
 
+  /js-tokens@8.0.2:
+    resolution: {integrity: sha512-Olnt+V7xYdvGze9YTbGFZIfQXuGV4R3nQwwl8BrtgaPE/wq8UFpUHWuTNc05saowhSr1ZO6tx+V6RjE9D5YQog==}
+    dev: true
+
   /js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
     hasBin: true
@@ -6399,6 +6406,16 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /postcss-html@1.5.0:
+    resolution: {integrity: sha512-kCMRWJRHKicpA166kc2lAVUGxDZL324bkj/pVOb6RhjB0Z5Krl7mN0AsVkBhVIRZZirY0lyQXG38HCVaoKVNoA==}
+    engines: {node: ^12 || >=14}
+    dependencies:
+      htmlparser2: 8.0.2
+      js-tokens: 8.0.2
+      postcss: 8.4.31
+      postcss-safe-parser: 6.0.0(postcss@8.4.31)
+    dev: true
+
   /postcss-resolve-nested-selector@0.1.1:
     resolution: {integrity: sha512-HvExULSwLqHLgUy1rl3ANIqCsvMS0WHss2UOsXhXnQaZ9VCc2oBvIpXrl00IUFT5ZDITME0o6oiXeiHr2SAIfw==}
     dev: true
@@ -7197,6 +7214,31 @@ packages:
     resolution: {integrity: sha512-Dj1Okke1C3uKKwQcetra4jSuk0DqbzbYtXipzFlFMZtowbF1x7BKJwB9AayVMyFARvU8EDrZdcax4At/452cAg==}
     dev: true
 
+  /stylelint-config-html@1.1.0(postcss-html@1.5.0)(stylelint@15.10.3):
+    resolution: {integrity: sha512-IZv4IVESjKLumUGi+HWeb7skgO6/g4VMuAYrJdlqQFndgbj6WJAXPhaysvBiXefX79upBdQVumgYcdd17gCpjQ==}
+    engines: {node: ^12 || >=14}
+    peerDependencies:
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
+    dependencies:
+      postcss-html: 1.5.0
+      stylelint: 15.10.3(typescript@5.2.2)
+    dev: true
+
+  /stylelint-config-recommended-vue@1.5.0(postcss-html@1.5.0)(stylelint@15.10.3):
+    resolution: {integrity: sha512-65TAK/clUqkNtkZLcuytoxU0URQYlml+30Nhop7sRkCZ/mtWdXt7T+spPSB3KMKlb+82aEVJ4OrcstyDBdbosg==}
+    engines: {node: ^12 || >=14}
+    peerDependencies:
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
+    dependencies:
+      postcss-html: 1.5.0
+      semver: 7.5.4
+      stylelint: 15.10.3(typescript@5.2.2)
+      stylelint-config-html: 1.1.0(postcss-html@1.5.0)(stylelint@15.10.3)
+      stylelint-config-recommended: 13.0.0(stylelint@15.10.3)
+    dev: true
+
   /stylelint-config-recommended@13.0.0(stylelint@15.10.3):
     resolution: {integrity: sha512-EH+yRj6h3GAe/fRiyaoO2F9l9Tgg50AOFhaszyfov9v6ayXJ1IkSHwTxd7lB48FmOeSGDPLjatjO11fJpmarkQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -7204,6 +7246,20 @@ packages:
       stylelint: ^15.10.0
     dependencies:
       stylelint: 15.10.3(typescript@5.2.2)
+    dev: true
+
+  /stylelint-config-standard-vue@1.0.0(postcss-html@1.5.0)(stylelint@15.10.3):
+    resolution: {integrity: sha512-wAzU7p6DSlo04pWfCbOcaMq09Nojt0FEsbdxhCBTdC7IguD9ZVl7FP/bvyA0HAHjZGC4JkW7m6WiQaoVMDSuFw==}
+    engines: {node: ^12 || >=14}
+    peerDependencies:
+      postcss-html: ^1.0.0
+      stylelint: '>=14.0.0'
+    dependencies:
+      postcss-html: 1.5.0
+      stylelint: 15.10.3(typescript@5.2.2)
+      stylelint-config-html: 1.1.0(postcss-html@1.5.0)(stylelint@15.10.3)
+      stylelint-config-recommended-vue: 1.5.0(postcss-html@1.5.0)(stylelint@15.10.3)
+      stylelint-config-standard: 34.0.0(stylelint@15.10.3)
     dev: true
 
   /stylelint-config-standard@34.0.0(stylelint@15.10.3):
