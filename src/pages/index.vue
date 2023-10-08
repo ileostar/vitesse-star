@@ -4,7 +4,7 @@ const { count, msg } = storeToRefs(indexStore)
 </script>
 
 <template>
-  <div class="logo-link">
+  <div flex="~ items-center" m-t-20 justify-center class="logo-link">
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo">
     </a>
@@ -24,9 +24,9 @@ const { count, msg } = storeToRefs(indexStore)
       <img src="@/assets/vitest.png" class="logo pinia" alt="Vitest logo">
     </a>
   </div>
-  <h2>{{ msg }}</h2>
+  <h2 text-7 m-3 font-bold>{{ msg }}</h2>
   <div class="card">
-    <button type="button" @click="indexStore.updateCount">
+    <button type="button" @click="indexStore.updateCount"  cursor-pointer font-100 border-rd-3 border p="t-2 b-2 l-3 r-3" m-2>
       count is {{ count }}
     </button>
     <p class="read-the-docs">
@@ -40,7 +40,7 @@ const { count, msg } = storeToRefs(indexStore)
   color: #888;
 }
 .logo {
-  height: 6em;
+  height: 8em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;

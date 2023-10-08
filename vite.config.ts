@@ -5,11 +5,10 @@ import { defineConfig } from 'vite'
 import type { ConfigEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
+import Pages from 'vite-plugin-pages'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import VueRouter from 'unplugin-vue-router/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueMacros from 'unplugin-vue-macros/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
@@ -40,25 +39,16 @@ export default defineConfig((_mode: ConfigEnv)=>{
         },
       }),
   
-      // https://github.com/posva/unplugin-vue-router
-      VueRouter({
-        routesFolder: 'src/pages',
-        extensions: ['.vue'],
-        dts: './typed-router.d.ts',
-        routeBlockLang: 'json5',
-        importMode: 'async',
-      }),
+      // https://github.com/hannoeru/vite-plugin-pages
+      Pages(),
   
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
         imports: [
           'vue',
           'pinia',
+          'vue-router',
           '@vueuse/core',
-          VueRouterAutoImports,
-          {
-            'vue-router/auto': ['useLink'],
-          },
           {
             alova: [     
               'useRequest',
@@ -76,6 +66,8 @@ export default defineConfig((_mode: ConfigEnv)=>{
         ],
         dts: true,
         dirs: [
+          './src/components',
+          './src/stores',
           './src/composables',
         ],
         vueTemplate: true,
