@@ -44,13 +44,13 @@
 克隆项目到本地：
 
 ``` bash
-git clone https://github.com/ileostar/vue3-star.git
+npx degit ileostar/vue-star 你的项目名称
 ```
 
 进入项目目录：
 
 ``` bash
-cd vue3-vite-ts-alova
+cd 你的项目名称
 ```
 
 安装依赖：
@@ -63,7 +63,7 @@ pnpm install
 
 ``` bash
 
-pnpm run dev
+pnpm dev
 ```
 
 打开浏览器，访问 http://localhost:5173 即可查看项目运行效果。

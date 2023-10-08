@@ -24,9 +24,11 @@ const { count, msg } = storeToRefs(indexStore)
       <img src="@/assets/vitest.png" class="logo pinia" alt="Vitest logo">
     </a>
   </div>
-  <h2 text-7 m-3 font-bold>{{ msg }}</h2>
+  <h2 m-3 text-7 font-bold>
+    {{ msg }}
+  </h2>
   <div class="card">
-    <button type="button" @click="indexStore.updateCount"  cursor-pointer font-100 border-rd-3 border p="t-2 b-2 l-3 r-3" m-2>
+    <button type="button" p="t-2 b-2 l-3 r-3" m-2 cursor-pointer border border-rd-3 font-100 @click="indexStore.updateCount">
       count is {{ count }}
     </button>
     <p class="read-the-docs">
