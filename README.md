@@ -65,7 +65,7 @@ cd 你的项目名称
 安装依赖：
 
 ``` bash
-pnpm install	# If there is no pnpm, npm i-g pnpm first
+pnpm install	# If there is no pnpm, npm i -g pnpm first
 ```
 
 启动开发服务器：
