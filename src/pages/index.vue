@@ -39,12 +39,12 @@ function go(): void {
       @keydown.enter="go"
     />
     <div>
-      <o-button 
+      <o-button
         type="info"
         mt-2
         :disabled="!name"
         @click="go"
-        >
+      >
         Go
       </o-button>
     </div>
