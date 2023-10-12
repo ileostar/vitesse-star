@@ -10,6 +10,7 @@
 - 🕸自动配置路由，使用 unplugin-vue-router 插件自动生成路由
 - 🥝自动引入，使用 unplugin-auto-import 插件实现组件自动引入
 - ✨集成 UnoCSS，提供轻量级的样式解决方案
+- 👀使用 Onu UI，一个基于UnoCSS的UI组件库
 - 🍀集成 Vitest，用于项目的单元测试
 - 🧰使用 VueUse 函数库辅助开发
 - 🙈使用 Alova 实现网络请求
@@ -18,45 +19,45 @@
 
 ## 📚学习
 
-### 架构相关🛠️
+### 架构相关
 
 - [Vue.js - The Progressive JavaScript Framework | Vue.js (vuejs.org)](https://vuejs.org/)
 - [Vite | Next Generation Frontend Tooling (vitejs.dev)](https://vitejs.dev/)
 
-### 插件⚔️
+### 插件
 
 - [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
 - [vite-plugin-pages](https://github.com/posva/vite-plugin-pages)
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components)
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
 
-### 状态管理🐹
+### 状态管理
 
 - [Pinia | The intuitive store for Vue.js (vuejs.org)](https://pinia.vuejs.org/zh/)
 
-### 网络请求🕸️
+### 网络请求
 
-- [[Alova.JS - 轻量级请求策略库 | Alova.JS](https://alova.js.org/zh-CN/)](https://alova.js.org/zh-CN/)
+- [Alova.JS - 轻量级请求策略库 | Alova.JS](https://alova.js.org/zh-CN/)
 
-### UI & CSS👀
+### UI & CSS
 
 - [UnoCSS 中文文档 (alfred-skyblue.github.io)](https://alfred-skyblue.github.io/)
 - [Onu UI 基于UnoCSS的组件库](https://onu.zyob.top/)
 
-### 工具函数🧰
+### 工具函数
 
 - [VueUse中文文档 | VueUse中文文档 (vueusejs.com)](http://www.vueusejs.com/)
 
-### 规范相关🚧
+### 规范相关
 
 - [🐶 husky | 🐶 husky (typicode.github.io)](https://typicode.github.io/husky/)
 - [lint-staged: 🚫💩 — Run linters on git staged files (github.com)](https://github.com/okonet/lint-staged)
 - [检测并修复 JavaScript 代码中的问题。 - ESLint - 插件化的 JavaScript 代码检查工具](https://zh-hans.eslint.org/)
 - [Home | Stylelint中文文档 | Stylelint中文网](https://www.stylelint.com.cn/)
-- [[Commitizen by commitizen](http://commitizen.github.io/cz-cli/)](https://github.com/commitizen/cz-cli)
+- [Commitizen by commitizen](https://github.com/commitizen/cz-cli)
 - [cz-emoji git commit emoji Message](https://github.com/ngryman/cz-emoji)
 
-### 单元测试🐛
+### 单元测试
 
 - [Vitest 下一代测试框架](https://cn.vitest.dev/)
 
@@ -81,7 +82,7 @@ cd 你的项目名称
 安装依赖：
 
 ``` bash
-pnpm install	# If there is no pnpm, npm i -g pnpm first
+pnpm install # If there is no pnpm, npm i -g pnpm first
 ```
 
 启动开发服务器：
@@ -90,7 +91,7 @@ pnpm install	# If there is no pnpm, npm i -g pnpm first
 pnpm dev
 ```
 
-打开浏览器，访问 http://localhost:5173 即可查看项目运行效果。
+打开浏览器，访问 http://localhost:3891 即可查看项目运行效果。
 
 ## 📝目录结构
 
@@ -133,7 +134,7 @@ pnpm dev
 
 该项目使用  vite-plugin-pages 插件来自动生成路由配置。详细的使用方法请参考插件文档。
 
-## ➕自动引入
+## 🐹自动引入
 
 ### 自动引入工具函数
 
