@@ -2,7 +2,7 @@
 
 ![demo](public/image.png)
 
-## 特性
+## 🏆特性
 
 - 🦄使用 Vite 构建工具快速构建项目
 - 🥑使用 ESLint、Stylelint 代码规范保证代码质量
@@ -16,17 +16,38 @@
 - 🍍使用 Pinia 进行状态管理
 - 📌使用 husky、lint-staged 规范git commit
 
-## 学习
+## 📚学习
 
-### 架构相关
+### 架构相关🛠️
 
 - [Vue.js - The Progressive JavaScript Framework | Vue.js (vuejs.org)](https://vuejs.org/)
 - [Vite | Next Generation Frontend Tooling (vitejs.dev)](https://vitejs.dev/)
+
+### 插件⚔️
+
+- [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
+- [vite-plugin-pages](https://github.com/posva/vite-plugin-pages)
+- [vite-plugin-components](https://github.com/antfu/vite-plugin-components)
+- [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
+
+## 状态管理🐹
+
 - [Pinia | The intuitive store for Vue.js (vuejs.org)](https://pinia.vuejs.org/zh/)
-- [UnoCSS 中文文档 (alfred-skyblue.github.io)](https://alfred-skyblue.github.io/)
+
+### 网络请求🕸️
+
 - [[Alova.JS - 轻量级请求策略库 | Alova.JS](https://alova.js.org/zh-CN/)](https://alova.js.org/zh-CN/)
 
-### 规范相关
+## UI & CSS👀
+
+- [UnoCSS 中文文档 (alfred-skyblue.github.io)](https://alfred-skyblue.github.io/)
+- [Onu UI 基于UnoCSS的组件库](https://onu.zyob.top/)
+
+### 工具函数🧰
+
+- [VueUse中文文档 | VueUse中文文档 (vueusejs.com)](http://www.vueusejs.com/)
+
+### 规范相关🚧
 
 - [🐶 husky | 🐶 husky (typicode.github.io)](https://typicode.github.io/husky/)
 - [lint-staged: 🚫💩 — Run linters on git staged files (github.com)](https://github.com/okonet/lint-staged)
@@ -35,20 +56,15 @@
 - [[Commitizen by commitizen](http://commitizen.github.io/cz-cli/)](https://github.com/commitizen/cz-cli)
 - [cz-emoji git commit emoji Message](https://github.com/ngryman/cz-emoji)
 
-### 插件
+### 单元测试🐛
 
-- [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
-- [vite-plugin-pages](https://github.com/posva/vite-plugin-pages)
+- [Vitest 下一代测试框架](https://cn.vitest.dev/)
 
-### 工具函数
+## 🔔项目介绍
 
-- [VueUse中文文档 | VueUse中文文档 (vueusejs.com)](http://www.vueusejs.com/)
+该项目是一个基于 Vue3、Vite 和 TypeScript 的脚手架模板，集成了 Alova 网络请求库和 Pinia 状态管理库，组件库采用Onu-UI。它旨在提供一个快速搭建 Vue3 项目的起点，同时也使用了一些优秀的第三方插件和库，以提高开发效率和项目质量。
 
-## 项目介绍
-
-该项目是一个基于 Vue3、Vite 和 TypeScript 的脚手架模板，集成了 Alova 网络请求库和 Pinia 状态管理库。它旨在提供一个快速搭建 Vue3 项目的起点，同时也使用了一些优秀的第三方插件和库，以提高开发效率和项目质量。
-
-## 快速开始
+## ✌️快速开始
 
 克隆项目到本地：
 
@@ -76,7 +92,7 @@ pnpm dev
 
 打开浏览器，访问 http://localhost:5173 即可查看项目运行效果。
 
-## 目录结构
+## 📝目录结构
 
 ```text
 ├── github                // 存放github的workfow
@@ -109,15 +125,15 @@ pnpm dev
 └── vite.config.ts        // Vite项目配置文件
 ```
 
-## 代码规范
+## 🤖代码规范
 
 该项目使用 ESLint 来保证代码规范一致性。你可以在 .eslintrc.json 文件中查看相关配置。在提交代码时，将会自动进行代码规范检查。
 
-## 配置路由
+## ⚙️配置路由
 
 该项目使用  vite-plugin-pages 插件来自动生成路由配置。详细的使用方法请参考插件文档。
 
-## 自动引入
+## ➕自动引入
 
 ### 自动引入工具函数
 
@@ -127,15 +143,15 @@ pnpm dev
 
 该项目使用 vite-plugin-components 插件来实现组件的自动引入，**即定义组件直接使用即可，无需手动引入**，你可以在 vite.config.ts 中修改自动引入的规则和配置。
 
-## 状态管理
+## 🍍状态管理
 
 该项目使用 Pinia 进行状态管理。你可以在 src/stores 目录下创建自己的状态模块，并在需要的组件中引入并使用它们。
 
-## 运行测试
+## 🐛运行测试
 
 该项目集成了 Vitest 单元测试工具。你可以在 test 目录下编写和运行测试用例。详细的使用方法请参考 Vitest 文档。
 
-## 贡献
+## 💖贡献
 
 如果你发现任何问题或有改进建议，请随时提交 Issue 或 Pull Request。我们欢迎并感谢你的贡献！
 

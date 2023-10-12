@@ -12,6 +12,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueMacros from 'unplugin-vue-macros/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
+import VueDevtools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig((_mode: ConfigEnv) => {
@@ -24,6 +25,7 @@ export default defineConfig((_mode: ConfigEnv) => {
     },
 
     plugins: [
+      VueDevtools(),
       // https://github.com/vue-macros/vue-macros
       VueMacros({
         defineOptions: false,
