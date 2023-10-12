@@ -7,7 +7,7 @@
     <a
       i-carbon-logo-github icon-btn
       rel="noreferrer"
-      href="https://github.com/ileostar/vue3-vite-ts-alova"
+      href="https://github.com/ileostar/vue-star"
       target="_blank"
       title="GitHub"
     />

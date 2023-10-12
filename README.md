@@ -5,6 +5,7 @@
 ## 🏆特性
 
 - 🦄使用 Vite 构建工具快速构建项目
+- 🛠️集成 Vue DevTools，可视化项目，助力开发和测试
 - 🥑使用 ESLint、Stylelint 代码规范保证代码质量
 - 📦拆箱即用，结合了 Vue3、Vite、Alova 和 TypeScript
 - 🕸自动配置路由，使用 unplugin-vue-router 插件自动生成路由
