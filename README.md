@@ -30,7 +30,7 @@
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components)
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
 
-## 状态管理🐹
+### 状态管理🐹
 
 - [Pinia | The intuitive store for Vue.js (vuejs.org)](https://pinia.vuejs.org/zh/)
 
@@ -38,7 +38,7 @@
 
 - [[Alova.JS - 轻量级请求策略库 | Alova.JS](https://alova.js.org/zh-CN/)](https://alova.js.org/zh-CN/)
 
-## UI & CSS👀
+### UI & CSS👀
 
 - [UnoCSS 中文文档 (alfred-skyblue.github.io)](https://alfred-skyblue.github.io/)
 - [Onu UI 基于UnoCSS的组件库](https://onu.zyob.top/)
