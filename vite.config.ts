@@ -75,7 +75,7 @@ export default defineConfig((_mode: ConfigEnv) => {
 
           // Auto import Onu UI components
           // 自动导入Onu UI组件
-          OnuResolver()
+          OnuResolver(),
         ],
         dts: true,
         dirs: [
@@ -106,7 +106,7 @@ export default defineConfig((_mode: ConfigEnv) => {
 
           // Auto import Onu UI components
           // 自动导入Onu UI组件
-          OnuResolver()
+          OnuResolver(),
         ],
         dts: true,
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
