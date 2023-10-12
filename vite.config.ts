@@ -13,6 +13,7 @@ import VueMacros from 'unplugin-vue-macros/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import VueDevtools from 'vite-plugin-vue-devtools'
+import { OnuResolver } from 'onu-ui'
 
 // https://vitejs.dev/config/
 export default defineConfig((_mode: ConfigEnv) => {
@@ -64,11 +65,17 @@ export default defineConfig((_mode: ConfigEnv) => {
           },
         ],
         resolvers: [
+          // Auto import UI components
+          // 自动导入ElementPlus组件
           ElementPlusResolver(),
 
           // Auto import icon components
           // 自动导入图标组件
           IconsResolver(),
+
+          // Auto import Onu UI components
+          // 自动导入Onu UI组件
+          OnuResolver()
         ],
         dts: true,
         dirs: [
@@ -96,6 +103,10 @@ export default defineConfig((_mode: ConfigEnv) => {
           // Auto register Element Plus components
           // 自动导入 Element Plus 组件
           ElementPlusResolver(),
+
+          // Auto import Onu UI components
+          // 自动导入Onu UI组件
+          OnuResolver()
         ],
         dts: true,
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
