@@ -31,6 +31,9 @@ devDependencies:
   '@iconify-json/mdi':
     specifier: ^1.1.54
     version: 1.1.54
+  '@iconify-json/streamline-emojis':
+    specifier: ^1.1.4
+    version: 1.1.4
   '@ileostar/eslint-config':
     specifier: ^0.3.0
     version: 0.3.0(eslint@8.51.0)(typescript@5.2.2)
@@ -921,6 +924,12 @@ packages:
 
   /@iconify-json/mdi@1.1.54:
     resolution: {integrity: sha512-3QAsxte90EalbN2e8J30OqSSZz9qN2x+kmykQwsPahoW2dOtSvj+BR9YdiUd9A5XKk2nuU4UH5Gj/cq6WZ6CzQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/streamline-emojis@1.1.4:
+    resolution: {integrity: sha512-rDOezTtMlpBYey63vyyMnz918K71DDxBqth1sGVikgKv/IgJ3HWdXWggy3nAA03YYyADUX5VBj1RAbVA6jUOwQ==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true

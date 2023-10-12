@@ -7,8 +7,13 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    OButton: typeof import('onu-ui')['OButton']
+    OText: typeof import('onu-ui')['OText']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
+    TheHeader: typeof import('./src/components/TheHeader.vue')['default']
+    TheInput: typeof import('./src/components/TheInput.vue')['default']
+    TheStudy: typeof import('./src/components/TheStudy.vue')['default']
   }
 }

@@ -5,7 +5,7 @@ const router = useRouter()
 
 <template>
   <div>
-    <div i-carbon-pedestrian inline-block text-4xl />
+    <div i-streamline-emojis-confetti-ball inline-block text-4xl />
     <p>
       Hi, {{ props.name }}
     </p>

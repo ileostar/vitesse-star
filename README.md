@@ -71,7 +71,7 @@
 克隆项目到本地：
 
 ``` bash
-npx degit ileostar/vue-star 你的项目名称
+npx degit ileostar/vitesse-star 你的项目名称  # If there is no npx, npm i -g npx first
 ```
 
 进入项目目录：
