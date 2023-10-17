@@ -2,6 +2,12 @@
 
 ![demo](public/image.png)
 
+<p align="center">
+  <a href="https://vitesse-star.netlify.app/">
+  👀 在线预览
+  </a>
+</p>
+
 ## 🏆特性
 
 - 🦄使用 Vite 构建工具快速构建项目
@@ -92,7 +98,7 @@ pnpm install # If there is no pnpm, npm i -g pnpm first
 pnpm dev
 ```
 
-打开浏览器，访问 http://localhost:3891 即可查看项目运行效果。
+打开浏览器，访问 <http://localhost:3891> 即可查看项目运行效果。
 
 ## 📝目录结构
 
