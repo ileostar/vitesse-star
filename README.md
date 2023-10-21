@@ -5,6 +5,9 @@
 <p align="center">
   <a href="https://vitesse-star.netlify.app/">
   👀 在线预览
+  </a>|
+  <a href="#✌️快速开始">
+  ✌️ 快速开始
   </a>
 </p>
 
@@ -136,6 +139,12 @@ pnpm dev
 ## 🤖代码规范
 
 该项目使用 ESLint 来保证代码规范一致性。你可以在 .eslintrc.json 文件中查看相关配置。在提交代码时，将会自动进行代码规范检查。
+
+## 🎇网络请求Alova
+
+该项目使用 Alova 插件来发送网络请求，下面是使用文档。
+
+[项目使用Alova文档参考](./src/api/README.md)
 
 ## ⚙️配置路由
 

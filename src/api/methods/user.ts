@@ -1,18 +1,14 @@
 // 案例学习：https://alova.js.org/zh-CN/tutorial/best-practice/method-manage
+import http from '..'
 
-import { userAlova } from '..'
-
-// 获取用户信息
-export const getUserInfo = (id: string) => userAlova.Get(`/user/${id}`)
-
-// 编辑用户信息
-export function editUserInfo(name: string, age: number, mobile: number) {
-  return userAlova.Post('/user', {
-    name,
-    age,
-    mobile,
-  })
+export default {
+  getHello: () => {
+    return http.get('')
+  },
+  findAll: (pageNum: number, pageCount: number) => {
+    return http.get('/user/findAll', {
+      pageNum,
+      pageCount,
+    })
+  },
 }
-
-// 移除用户
-export const removeUser = (id: string) => userAlova.Delete(`/user/${id}`)
