@@ -6,7 +6,7 @@
   <a href="https://vitesse-star.netlify.app/">
   👀 在线预览
   </a>|
-  <a href="#✌️快速开始">
+  <a href="[#✌️快速开始](https://github.com/ileostar/vitesse-star#%EF%B8%8F%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)">
   ✌️ 快速开始
   </a>
 </p>
