@@ -3,7 +3,7 @@
 ![demo](public/image.png)
 
 <p align="center">
-  <a href="https://vitesse-star.netlify.app/">
+  <a href="https://vitesse-star.netlify.app/" target="_blank">
   👀 在线预览
   </a>|
   <a href="https://github.com/ileostar/vitesse-star#%EF%B8%8F%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">
