@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^0.56.5
     version: 0.56.5(eslint@8.51.0)(typescript@5.2.2)
   '@unocss/eslint-plugin':
-    specifier: ^0.56.5
-    version: 0.56.5(eslint@8.51.0)(typescript@5.2.2)
+    specifier: ^0.57.0
+    version: 0.57.0(eslint@8.51.0)(typescript@5.2.2)
   '@unocss/preset-icons':
     specifier: ^0.56.5
     version: 0.56.5
@@ -1781,8 +1781,20 @@ packages:
       unconfig: 0.3.11
     dev: true
 
+  /@unocss/config@0.57.0:
+    resolution: {integrity: sha512-hgJ/40gNkU7PQb+v1BTerb8QH1xNJkzSaj1IPWjSq/ibPmrS7+9ics2YIsKzxC3GAr7YdhD8IBdCEEop0iJhTQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@unocss/core': 0.57.0
+      unconfig: 0.3.11
+    dev: true
+
   /@unocss/core@0.56.5:
     resolution: {integrity: sha512-fx5VhOjSHn0HdV2D34pEwFMAHJcJQRTCp1xEE4GzxY1irXzaa+m2aYf5PZjmDxehiOC16IH7TO9FOWANXk1E0w==}
+    dev: true
+
+  /@unocss/core@0.57.0:
+    resolution: {integrity: sha512-vjLnE3PnbFQY0du8jC1hZorFNFlVBBeqo7AoO+69Jqx7aJx3gtBlg4QQV607LIJgU+hsul3RUy8r/pKb7y1MoA==}
     dev: true
 
   /@unocss/eslint-config@0.56.5(eslint@8.51.0)(typescript@5.2.2):
@@ -1803,6 +1815,21 @@ packages:
       '@typescript-eslint/utils': 6.8.0(eslint@8.51.0)(typescript@5.2.2)
       '@unocss/config': 0.56.5
       '@unocss/core': 0.56.5
+      magic-string: 0.30.5
+      synckit: 0.8.5
+    transitivePeerDependencies:
+      - eslint
+      - supports-color
+      - typescript
+    dev: true
+
+  /@unocss/eslint-plugin@0.57.0(eslint@8.51.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-0dr/Zw8FuMy4UD4yT9uofb125KGgEt0fILPg0MFkE5zre/C+mOiK763RAs1dOlTvBizhLQh1gD9BmlN2+b8mpg==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@typescript-eslint/utils': 6.8.0(eslint@8.51.0)(typescript@5.2.2)
+      '@unocss/config': 0.57.0
+      '@unocss/core': 0.57.0
       magic-string: 0.30.5
       synckit: 0.8.5
     transitivePeerDependencies:
