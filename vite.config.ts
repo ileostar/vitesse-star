@@ -14,6 +14,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import VueDevtools from 'vite-plugin-vue-devtools'
 import { OnuResolver } from 'onu-ui'
+import depazer from '@depazer/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig((_mode: ConfigEnv) => {
@@ -45,6 +46,8 @@ export default defineConfig((_mode: ConfigEnv) => {
           }),
         },
       }),
+
+      depazer(),
 
       // https://github.com/hannoeru/vite-plugin-pages
       Pages(),

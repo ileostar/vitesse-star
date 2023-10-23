@@ -35,6 +35,7 @@
   "devDependencies": {
     "@alova/adapter-axios": "^1.1.1",
     "@antfu/eslint-config": "1.0.0-beta.27",
+    "@depazer/vite": "^1.0.0",
     "@iconify-json/carbon": "^1.1.21",
     "@iconify-json/mdi": "^1.1.54",
     "@iconify-json/streamline-emojis": "^1.1.4",

@@ -26,6 +26,7 @@
 - 🙈使用 Alova 实现网络请求
 - 🍍使用 Pinia 进行状态管理
 - 📌使用 husky、lint-staged 规范git commit
+- 🍉使用 dezaper 分析依赖库
 
 ## 📚学习
 
@@ -40,6 +41,7 @@
 - [vite-plugin-pages](https://github.com/posva/vite-plugin-pages)
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components)
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
+- [dezaper](https://github.com/depazer/depazer)
 
 ### 状态管理
 
@@ -163,6 +165,12 @@ pnpm dev
 ## 🍍状态管理
 
 该项目使用 Pinia 进行状态管理。你可以在 src/stores 目录下创建自己的状态模块，并在需要的组件中引入并使用它们。
+
+## 🍉依赖分析
+
+该项目使用 depazer 进行依赖分析，可视化依赖库，方便学习。
+
+项目启动后可以<http://localhost:3891/__depazer>查看当前项目依赖。
 
 ## 🐛运行测试
 

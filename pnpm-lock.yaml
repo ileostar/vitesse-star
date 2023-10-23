@@ -25,6 +25,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: 1.0.0-beta.27
     version: 1.0.0-beta.27(eslint@8.51.0)(typescript@5.2.2)(vitest@0.34.6)
+  '@depazer/vite':
+    specifier: ^1.0.0
+    version: 1.0.0
   '@iconify-json/carbon':
     specifier: ^1.1.21
     version: 1.1.21
@@ -656,6 +659,10 @@ packages:
       postcss-selector-parser: ^6.0.13
     dependencies:
       postcss-selector-parser: 6.0.13
+    dev: true
+
+  /@depazer/vite@1.0.0:
+    resolution: {integrity: sha512-btQPyouwkAQ9IY9syoeBbfu0vH+Suu1ngJjKks7EhmUnbyB5eyWNrO4q8p5Hxva4cusXNntEDeWEmf6gNcgglg==}
     dev: true
 
   /@es-joy/jsdoccomment@0.40.1:
