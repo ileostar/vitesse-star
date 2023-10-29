@@ -34,9 +34,9 @@ export default defineConfig((mode: ConfigEnv) => {
     host: envMap.VITE_HOST || 'localhost',
     proxy: {
       [envMap.VITE_BASE_URI || '/api']: {
-        target: envMap.VITE_PROXY_DOMAIN || 'localhost'
-      }
-    }
+        target: envMap.VITE_PROXY_DOMAIN || 'localhost',
+      },
+    },
   }
   return {
     server,
@@ -61,7 +61,7 @@ export default defineConfig((mode: ConfigEnv) => {
         },
       }),
       ViteImages({
-        dirs: ['src/assets/image'], // 指明图片存放目录
+        dirs: ['src/assets/images'], // 指明图片存放目录
       }),
       ViteRestart({
         restart: [
