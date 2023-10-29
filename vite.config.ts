@@ -24,9 +24,7 @@ import dotenv from 'dotenv'
 // https://vitejs.dev/config/
 export default defineConfig((mode: ConfigEnv) => {
   const envFileName: string = '.env'
-  const envMode = mode.mode === 'dev'?'development':'production'
-
-  const curEnvFileName = `${envFileName}.${envMode}`
+  const curEnvFileName = `${envFileName}.${mode.mode}`
 
   let server: CommonServerOptions = {}
   const envDate = fs.readFileSync(curEnvFileName)
