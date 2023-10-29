@@ -44,7 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^6.8.0",
     "@typescript-eslint/parser": "^6.8.0",
     "@unocss/eslint-config": "^0.56.5",
-    "@unocss/eslint-plugin": "^0.56.5",
+    "@unocss/eslint-plugin": "^0.57.1",
     "@unocss/preset-icons": "^0.56.5",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue-macros/volar": "^0.17.0",
