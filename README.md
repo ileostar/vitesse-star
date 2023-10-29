@@ -142,11 +142,11 @@ pnpm dev
 
 ### 读取配置
 
-默认读取顺序`.env.dev/.env.pro > .env`
+默认读取顺序`.env.development/.env.production > .env`
 
-开发环境下可以在`.env.dev`修改需要配置
+开发环境下可以在`.env.development`修改需要配置
 
-生成环境下可以在`.env.pro`修改需要配置
+生成环境下可以在`.env.production`修改需要配置
 
 ### 添加配置项
 
