@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Hhhh: typeof import('./src/components/hhhh.vue')['default']
     OButton: typeof import('onu-ui')['OButton']
     OText: typeof import('onu-ui')['OText']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -15,5 +16,6 @@ declare module 'vue' {
     TheHeader: typeof import('./src/components/TheHeader.vue')['default']
     TheInput: typeof import('./src/components/TheInput.vue')['default']
     TheStudy: typeof import('./src/components/TheStudy.vue')['default']
+    Xxx: typeof import('./src/components/xxx.vue')['default']
   }
 }

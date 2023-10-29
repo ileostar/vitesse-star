@@ -1,8 +1,9 @@
 /// <reference types="vitest" />
 
 import path from 'node:path'
+import fs from 'node:fs'
 import { defineConfig } from 'vite'
-import type { ConfigEnv } from 'vite'
+import type { CommonServerOptions, ConfigEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import Pages from 'vite-plugin-pages'
@@ -15,13 +16,28 @@ import Icons from 'unplugin-icons/vite'
 import VueDevtools from 'vite-plugin-vue-devtools'
 import { OnuResolver } from 'onu-ui'
 import depazer from '@depazer/vite'
+import ViteRestart from 'vite-plugin-restart'
+import ViteImages from 'vite-plugin-vue-images'
+import type { DotenvParseOutput } from 'dotenv'
+import dotenv from 'dotenv'
 
 // https://vitejs.dev/config/
-export default defineConfig((_mode: ConfigEnv) => {
-  const server = {
-    port: 3891,
-  }
+export default defineConfig((mode: ConfigEnv) => {
+  const envFileName: string = '.env'
+  const curEnvFileName = `${envFileName}.${mode.mode}`
+  let server: CommonServerOptions = {}
+  const envDate = fs.readFileSync(curEnvFileName)
+  const envMap: DotenvParseOutput = dotenv.parse(envDate)
 
+  server = {
+    port: envMap.VITE_PORT || 3891,
+    host: envMap.VITE_HOST || 'localhost',
+    proxy: {
+      [envMap.VITE_BASE_URI || '/api']: {
+        target: envMap.VITE_PROXY_DOMAIN || 'localhost'
+      }
+    }
+  }
   return {
     server,
     resolve: {
@@ -30,10 +46,8 @@ export default defineConfig((_mode: ConfigEnv) => {
       },
       extensions: ['.js', '.json', '.ts'],
     },
-
     plugins: [
-      VueDevtools(),
-      // https://github.com/vue-macros/vue-macros
+    // https://github.com/vue-macros/vue-macros
       VueMacros({
         defineOptions: false,
         defineModels: false,
@@ -46,6 +60,15 @@ export default defineConfig((_mode: ConfigEnv) => {
           }),
         },
       }),
+      ViteImages({
+        dirs: ['src/assets/image'], // 指明图片存放目录
+      }),
+      ViteRestart({
+        restart: [
+          'vite.config.[jt]s',
+        ],
+      }),
+      VueDevtools(),
 
       depazer(),
 
@@ -68,8 +91,8 @@ export default defineConfig((_mode: ConfigEnv) => {
           },
         ],
         resolvers: [
-          // Auto import UI components
-          // 自动导入ElementPlus组件
+        // Auto import UI components
+        // 自动导入ElementPlus组件
           ElementPlusResolver(),
 
           // Auto import icon components
@@ -98,8 +121,8 @@ export default defineConfig((_mode: ConfigEnv) => {
       // https://github.com/antfu/vite-plugin-components
       Components({
         resolvers: [
-          // Auto register icon components
-          // 自动注册图标组件
+        // Auto register icon components
+        // 自动注册图标组件
           IconsResolver({
             enabledCollections: ['ep'],
           }),

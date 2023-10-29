@@ -73,6 +73,9 @@ devDependencies:
   cz-emoji:
     specifier: 1.3.2-canary.2
     version: 1.3.2-canary.2
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
   eslint:
     specifier: ^8.51.0
     version: 8.51.0
@@ -139,9 +142,15 @@ devDependencies:
   vite-plugin-pages:
     specifier: ^0.31.0
     version: 0.31.0(vite@4.4.11)
+  vite-plugin-restart:
+    specifier: ^0.3.1
+    version: 0.3.1(vite@4.4.11)
   vite-plugin-vue-devtools:
     specifier: 1.0.0-rc.5
     version: 1.0.0-rc.5(pug@3.0.2)(vite@4.4.11)
+  vite-plugin-vue-images:
+    specifier: ^0.6.1
+    version: 0.6.1
   vitest:
     specifier: ^0.34.6
     version: 0.34.6(jsdom@22.1.0)
@@ -3848,6 +3857,11 @@ packages:
       domhandler: 5.0.3
     dev: true
 
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: true
+
   /duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
     dev: true
@@ -4615,6 +4629,18 @@ packages:
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     requiresBuild: true
+    dev: true
+
+  /fast-glob@3.2.5:
+    resolution: {integrity: sha512-2DtFcgT68wiTTiwZ2hNdJfcHNke9XOfnwmBRWXhmeKM8rF0TGwmC/Qto3S7RoZKp5cilZbxzO5iTNTQsJ+EeDg==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.5
+      picomatch: 2.3.1
     dev: true
 
   /fast-glob@3.3.1:
@@ -8975,6 +9001,15 @@ packages:
       - supports-color
     dev: true
 
+  /vite-plugin-restart@0.3.1(vite@4.4.11):
+    resolution: {integrity: sha512-LVe74MLUwaOzXVUgRGiphYbAYNgdGF6mP5vxj5BKcKkdmzvuuw79qcNgn9kHKKaIlCCjmOUiY3qlJ8jBSBUCoA==}
+    peerDependencies:
+      vite: ^2.9.0 || ^3.0.0 || ^4.0.0
+    dependencies:
+      micromatch: 4.0.5
+      vite: 4.4.11(@types/node@20.8.6)
+    dev: true
+
   /vite-plugin-vue-devtools@1.0.0-rc.5(pug@3.0.2)(vite@4.4.11):
     resolution: {integrity: sha512-tAckFvkhSVJvqRKglP3bYi5FVGajNs/OJbSCMGxzog6wNin5Fb2RPPt1rsJDXwUJ4hcTY73QqlVO0UjYd1+39w==}
     engines: {node: '>=v14.21.3'}
@@ -8993,6 +9028,15 @@ packages:
       - '@nuxt/kit'
       - pug
       - rollup
+      - supports-color
+    dev: true
+
+  /vite-plugin-vue-images@0.6.1:
+    resolution: {integrity: sha512-eaZHMimOOQdPSPIrAOrgwyS2pwxhLxAKc2idljCfThGZEDLAmPc4EtN2JOywUZb0Kcx/7+JDOIRFEJPTV5X5cg==}
+    dependencies:
+      debug: 4.3.4
+      fast-glob: 3.2.5
+    transitivePeerDependencies:
       - supports-color
     dev: true
 
