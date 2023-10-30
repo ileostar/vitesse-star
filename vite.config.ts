@@ -61,9 +61,6 @@ export default defineConfig((mode: ConfigEnv) => {
           }),
         },
       }),
-      ViteImages({
-        dirs: ['src/assets/images'], // 指明图片存放目录
-      }),
       ViteRestart({
         restart: [
           'vite.config.[jt]s',
@@ -71,6 +68,7 @@ export default defineConfig((mode: ConfigEnv) => {
       }),
       VueDevtools(),
 
+      // https://github.com/depazer/depazer
       depazer(),
 
       // https://github.com/hannoeru/vite-plugin-pages
@@ -92,8 +90,8 @@ export default defineConfig((mode: ConfigEnv) => {
           },
         ],
         resolvers: [
-        // Auto import UI components
-        // 自动导入ElementPlus组件
+          // Auto import UI components
+          // 自动导入ElementPlus组件
           ElementPlusResolver(),
 
           // Auto import icon components
@@ -122,8 +120,8 @@ export default defineConfig((mode: ConfigEnv) => {
       // https://github.com/antfu/vite-plugin-components
       Components({
         resolvers: [
-        // Auto register icon components
-        // 自动注册图标组件
+          // Auto register icon components
+          // 自动注册图标组件
           IconsResolver({
             enabledCollections: ['ep'],
           }),
@@ -139,11 +137,20 @@ export default defineConfig((mode: ConfigEnv) => {
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
 
+      // https://github.com/sampullman/vite-plugin-vue-images
+      ViteImages({
+        dirs: ['src/assets/images'], // 指明图片存放目录
+        extensions: ['jpg', 'jpeg', 'png', 'svg', 'webp'], // 有效的图像扩展
+        customResolvers: [], // 覆盖名称->图像路径解析的默认行为
+        customSearchRegex: '([a-zA-Z0-9]+)' // 重写搜索要替换的变量的Regex。
+      }),
+
       // https://github.com/antfu/unocss
       // see uno.config.ts for config
       UnoCSS(),
 
       Icons({
+        compiler: 'vue3',
         autoInstall: true,
       }),
     ],
