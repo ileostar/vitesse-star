@@ -145,9 +145,6 @@ devDependencies:
   vite-plugin-vue-devtools:
     specifier: 1.0.0-rc.5
     version: 1.0.0-rc.5(pug@3.0.2)(vite@4.5.0)
-  vite-plugin-vue-images:
-    specifier: ^0.6.1
-    version: 0.6.1
   vitest:
     specifier: ^0.34.6
     version: 0.34.6(jsdom@22.1.0)
@@ -4552,18 +4549,6 @@ packages:
     requiresBuild: true
     dev: true
 
-  /fast-glob@3.2.5:
-    resolution: {integrity: sha512-2DtFcgT68wiTTiwZ2hNdJfcHNke9XOfnwmBRWXhmeKM8rF0TGwmC/Qto3S7RoZKp5cilZbxzO5iTNTQsJ+EeDg==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-      picomatch: 2.3.1
-    dev: true
-
   /fast-glob@3.3.1:
     resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
     engines: {node: '>=8.6.0'}
@@ -8803,15 +8788,6 @@ packages:
       - '@nuxt/kit'
       - pug
       - rollup
-      - supports-color
-    dev: true
-
-  /vite-plugin-vue-images@0.6.1:
-    resolution: {integrity: sha512-eaZHMimOOQdPSPIrAOrgwyS2pwxhLxAKc2idljCfThGZEDLAmPc4EtN2JOywUZb0Kcx/7+JDOIRFEJPTV5X5cg==}
-    dependencies:
-      debug: 4.3.4
-      fast-glob: 3.2.5
-    transitivePeerDependencies:
       - supports-color
     dev: true
 

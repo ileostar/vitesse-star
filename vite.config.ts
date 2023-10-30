@@ -17,7 +17,6 @@ import VueDevtools from 'vite-plugin-vue-devtools'
 import { OnuResolver } from 'onu-ui'
 import depazer from '@depazer/vite'
 import ViteRestart from 'vite-plugin-restart'
-import ViteImages from 'vite-plugin-vue-images'
 import type { DotenvParseOutput } from 'dotenv'
 import dotenv from 'dotenv'
 
@@ -106,7 +105,7 @@ export default defineConfig((mode: ConfigEnv) => {
         dirs: [
           './src/components',
           './src/stores',
-          './src/composables',
+          './src/composables'
         ],
         vueTemplate: true,
         eslintrc: {
@@ -135,14 +134,6 @@ export default defineConfig((mode: ConfigEnv) => {
         ],
         dts: true,
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      }),
-
-      // https://github.com/sampullman/vite-plugin-vue-images
-      ViteImages({
-        dirs: ['src/assets/images'], // 指明图片存放目录
-        extensions: ['jpg', 'jpeg', 'png', 'svg', 'webp'], // 有效的图像扩展
-        customResolvers: [], // 覆盖名称->图像路径解析的默认行为
-        customSearchRegex: '([a-zA-Z0-9]+)' // 重写搜索要替换的变量的Regex。
       }),
 
       // https://github.com/antfu/unocss

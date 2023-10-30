@@ -152,41 +152,6 @@ pnpm dev
 
 需要以VITE开头，如果在src中用可以使用`import.meta.env.<配置项>`,在`vite.config.ts`中用，这里用的是`dotenv`读取文件，需要在`./myenv.d.ts`文件下添加TS接口，才会有提示。
 
-## 图片自动引入
-
-在`src/assets/images`下的图片可以自动引入
-
-### 模板使用
-
-```Vue
-<template>
-  <!-- 直接使用 -->
-  <img :src="Logo" />
-</template>
-
-<script lang="ts" setup>
-// import Logo from '@/assets/image/logo.png'
-</script>
-
-```
-
-### 修改路径
-
-```typescript
-// vite.config.ts
-import { defineConfig } from 'vite'
-import ViteImages from 'vite-plugin-vue-images'
-
-export default defineConfig({
-  plugins: [
-    ViteImages({
-      dirs: ['src/assets/image'] // 指明图片存放目录
-    })
-  ]
-})
-```
-
-
 ## 🤖代码规范
 
 该项目使用 ESLint 来保证代码规范一致性。你可以在 .eslintrc.json 文件中查看相关配置。在提交代码时，将会自动进行代码规范检查。
