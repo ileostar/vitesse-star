@@ -105,7 +105,7 @@ export default defineConfig((mode: ConfigEnv) => {
         dirs: [
           './src/components',
           './src/stores',
-          './src/composables'
+          './src/composables',
         ],
         vueTemplate: true,
         eslintrc: {

@@ -5,19 +5,19 @@
         <img src="/vite.svg" class="logo" alt="Vite logo">
       </a>
       <a href="https://vuejs.org/" target="_blank">
-        <img src="@/assets/vue.svg" class="logo vue" alt="Vue logo">
+        <img src="@/assets/images/vue.svg" class="logo vue" alt="Vue logo">
       </a>
       <a href="https://pinia.vuejs.org/zh/" target="_blank">
-        <img src="@/assets/pinia.svg" class="logo pinia" alt="Pinia logo">
+        <img src="@/assets/images/pinia.svg" class="logo pinia" alt="Pinia logo">
       </a>
       <a href="https://alfred-skyblue.github.io/" target="_blank">
-        <img src="@/assets/unocss.svg" class="logo unocss" alt="UnoCss logo">
+        <img src="@/assets/images/unocss.svg" class="logo unocss" alt="UnoCss logo">
       </a>
       <a href="https://alova.js.org/zh-CN/" target="_blank">
-        <img src="@/assets/alova.svg" class="logo alova" alt="Alova logo">
+        <img src="@/assets/images/alova.svg" class="logo alova" alt="Alova logo">
       </a>
       <a href="https://cn.vitest.dev/" target="_blank">
-        <img src="@/assets/vitest.png" class="logo pinia" alt="Vitest logo">
+        <img src="@/assets/images/vitest.png" class="logo pinia" alt="Vitest logo">
       </a>
     </div>
   </nav>
