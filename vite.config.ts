@@ -8,6 +8,7 @@ import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import Pages from 'vite-plugin-pages'
 import AutoImport from 'unplugin-auto-import/vite'
+import PiniaAutoRefs from 'pinia-auto-refs'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -20,6 +21,7 @@ import ViteRestart from 'vite-plugin-restart'
 import type { DotenvParseOutput } from 'dotenv'
 import dotenv from 'dotenv'
 
+
 // https://vitejs.dev/config/
 export default defineConfig((mode: ConfigEnv) => {
   const envFileName: string = '.env'
@@ -30,7 +32,7 @@ export default defineConfig((mode: ConfigEnv) => {
   const envMap: DotenvParseOutput = dotenv.parse(envDate)
 
   server = {
-    port: envMap.VITE_PORT || 3891,
+    port: Number(envMap.VITE_PORT) || 3891,
     host: envMap.VITE_HOST || 'localhost',
     proxy: {
       [envMap.VITE_BASE_URI || '/api']: {
@@ -60,11 +62,13 @@ export default defineConfig((mode: ConfigEnv) => {
           }),
         },
       }),
+
       ViteRestart({
         restart: [
           'vite.config.[jt]s',
         ],
       }),
+
       VueDevtools(),
 
       // https://github.com/depazer/depazer
@@ -87,7 +91,11 @@ export default defineConfig((mode: ConfigEnv) => {
               'useFetcher',
             ],
           },
+          {
+            '@/helper/pinia-auto-refs': ['useStore'],
+          },
         ],
+
         resolvers: [
           // Auto import UI components
           // 自动导入ElementPlus组件
@@ -115,6 +123,9 @@ export default defineConfig((mode: ConfigEnv) => {
         },
 
       }),
+
+      // https://github.com/Allen-1998/pinia-auto-refs
+      PiniaAutoRefs(),
 
       // https://github.com/antfu/vite-plugin-components
       Components({

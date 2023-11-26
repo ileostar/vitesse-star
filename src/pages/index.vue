@@ -4,10 +4,9 @@ defineOptions({
 })
 
 const router = useRouter()
-const indexStore = useIndexStore()
 
 const name = ref('')
-const { msg } = storeToRefs(indexStore)
+const { msg } = useStore('home')
 
 /**
  * 跳转链接

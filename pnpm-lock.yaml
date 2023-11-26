@@ -97,6 +97,9 @@ devDependencies:
   pinia:
     specifier: ^2.1.7
     version: 2.1.7(typescript@5.2.2)(vue@3.3.7)
+  pinia-auto-refs:
+    specifier: ^0.0.10
+    version: 0.0.10
   pinia-plugin-persistedstate:
     specifier: ^3.2.0
     version: 3.2.0(pinia@2.1.7)
@@ -6970,6 +6973,12 @@ packages:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
     engines: {node: '>=0.10'}
     hasBin: true
+    dev: true
+
+  /pinia-auto-refs@0.0.10:
+    resolution: {integrity: sha512-r0Uwp2cmVmO0PajvO1Wj+s3NxujhPqpVSnbJ1lORwhlkk8JKwO22Ugo/dxk6Gl0S9f374DStJNGJl5fBW1Djow==}
+    dependencies:
+      chokidar: 3.5.3
     dev: true
 
   /pinia-plugin-persistedstate@3.2.0(pinia@2.1.7):

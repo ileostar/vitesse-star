@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ES2016",
     "lib": ["DOM", "ESNext"],
     "jsx": "preserve",
     "module": "ESNext",
@@ -24,6 +24,7 @@
     "noUnusedLocals": true,
     "skipLibCheck": true
   },
+  "references": [{ "path": "./tsconfig.node.json" }],
   "exclude": [
     "dist",
     "node_modules"

@@ -59,6 +59,7 @@
     "lint-staged": "^15.0.2",
     "onu-ui": "1.0.14-beta.2",
     "pinia": "^2.1.7",
+    "pinia-auto-refs": "^0.0.10",
     "pinia-plugin-persistedstate": "^3.2.0",
     "postcss-html": "^1.5.0",
     "stylelint": "^15.11.0",
