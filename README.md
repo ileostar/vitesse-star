@@ -41,6 +41,7 @@
 - [vite-plugin-pages](https://github.com/posva/vite-plugin-pages)
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components)
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
+- [pinia-auto-refs](https://github.com/Allen-1998/pinia-auto-refs)
 - [dezaper](https://github.com/depazer/depazer)
 
 ### 状态管理
@@ -120,20 +121,30 @@ pnpm dev
 │   ├── assets            // 静态资源文件夹，如图片、字体等
 │   ├── components        // 组件目录
 │   ├── composables       // 存放状态逻辑的函数
+│   ├── helper            // pinia-auto-refs插件自动生成目录
 │   ├── pages             // 视图目录，存放页面级组件
 │   ├── store             // Vuex状态管理文件夹
 │   ├── styles            // 样式文件夹，存放全局样式和公共样式
 │   ├── App.vue           // 根组件
 │   └── main.ts           // 项目入口文件
 ├── test                  // 单元测试
+├── .editorconfig         // IDE配置文件
+├── .gitignore            // git忽略文件
+├── .npmrc                // npm管理配置
+├── .stylelintrc.json     // stylelintrc文件
 ├── .env                  // 配置环境
-├── .env.pro              // 配置环境
-├── .env.dev              // 配置环境
+├── .env.pro              // 生产配置环境
+├── .env.dev              // 开发配置环境
 ├── index.html            // 项目页面入口
+├── myenv.d.ts            // 环境声明文件
+├── netlify.toml          // netlify部署配置
+├── .eslintignore         // ESLint忽略文件
 ├── .eslintrc.json        // ESLint配置文件
 ├── package.json          // 项目依赖配置文件
+├── shims.d.ts            // 声明文件
 ├── README.md             // 项目说明文件
-├── tsconfig.ts           // ESLint配置文件
+├── tsconfig.ts           // TS配置文件
+├── tsconfig.node.ts      // TS-Node配置文件
 ├── uno.config.ts         // ESLint配置文件
 └── vite.config.ts        // Vite项目配置文件
 ```
@@ -179,6 +190,24 @@ pnpm dev
 ## 🍍状态管理
 
 该项目使用 Pinia 进行状态管理。你可以在 src/stores 目录下创建自己的状态模块，并在需要的组件中引入并使用它们。
+
+这里使用了[pinia-auto-refs](https://github.com/Allen-1998/pinia-auto-refs)插件简化引入
+
+**使用插件前：**
+
+```ts
+import useUserStore from '@/store/user'
+
+const userStore = useUserStore()
+const { name, token, fullName } = storeToRefs(userStore)
+const { updateName } = userStore
+```
+
+**使用插件后：**
+
+```ts
+const { name, token, fullName, updateName } = useStore('user')
+```
 
 ## 🍉依赖分析
 
