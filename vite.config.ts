@@ -21,7 +21,6 @@ import ViteRestart from 'vite-plugin-restart'
 import type { DotenvParseOutput } from 'dotenv'
 import dotenv from 'dotenv'
 
-
 // https://vitejs.dev/config/
 export default defineConfig((mode: ConfigEnv) => {
   const envFileName: string = '.env'
@@ -40,6 +39,7 @@ export default defineConfig((mode: ConfigEnv) => {
       },
     },
   }
+
   return {
     server,
     resolve: {
@@ -112,7 +112,7 @@ export default defineConfig((mode: ConfigEnv) => {
         dts: true,
         dirs: [
           './src/components',
-          './src/stores',
+          './src/store',
           './src/composables',
         ],
         vueTemplate: true,
@@ -156,7 +156,6 @@ export default defineConfig((mode: ConfigEnv) => {
         autoInstall: true,
       }),
     ],
-
     // https://github.com/vitest-dev/vitest
     test: {
       environment: 'jsdom',
