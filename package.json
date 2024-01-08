@@ -61,7 +61,7 @@
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "lint": "^0.8.19",
-    "lint-staged": "^15.0.2",
+    "lint-staged": "^15.2.0",
     "onu-ui": "1.0.14-beta.2",
     "pinia": "^2.1.7",
     "pinia-auto-refs": "^0.0.10",
