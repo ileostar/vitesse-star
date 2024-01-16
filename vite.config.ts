@@ -76,7 +76,9 @@ export default defineConfig((mode: ConfigEnv) => {
       depazer(),
 
       // https://github.com/posva/unplugin-vue-router
-      VueRouter(),
+      VueRouter({
+        dts: "./types/vue-router.d.ts"
+      }),
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
@@ -119,7 +121,7 @@ export default defineConfig((mode: ConfigEnv) => {
           // 自动导入Onu UI组件
           OnuResolver(),
         ],
-        dts: './auto-imports.d.ts',
+        dts: './types/auto-imports.d.ts',
         dirs: [
           './src/components',
           './src/store',
@@ -154,7 +156,7 @@ export default defineConfig((mode: ConfigEnv) => {
           // 自动导入Onu UI组件
           OnuResolver(),
         ],
-        dts: true,
+        dts: './types/components.d.ts',
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       }),
 

@@ -11,8 +11,8 @@ declare module 'vue' {
     OText: typeof import('onu-ui')['OText']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheFooter: typeof import('./src/components/TheFooter.vue')['default']
-    TheInput: typeof import('./src/components/TheInput.vue')['default']
-    TheStudy: typeof import('./src/components/TheStudy.vue')['default']
+    TheFooter: typeof import('./../src/components/TheFooter.vue')['default']
+    TheInput: typeof import('./../src/components/TheInput.vue')['default']
+    TheStudy: typeof import('./../src/components/TheStudy.vue')['default']
   }
 }
