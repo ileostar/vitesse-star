@@ -77,7 +77,7 @@ export default defineConfig((mode: ConfigEnv) => {
 
       // https://github.com/posva/unplugin-vue-router
       VueRouter({
-        dts: "./types/vue-router.d.ts"
+        dts: './types/vue-router.d.ts',
       }),
 
       // https://github.com/antfu/unplugin-auto-import
