@@ -79,6 +79,12 @@ export default defineConfig((mode: ConfigEnv) => {
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
+        include: [
+          /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+          /\.vue$/,
+          /\.vue\?vue/, // .vue
+          /\.md$/, // .md
+        ],
         imports: [
           'vue',
           'pinia',
@@ -95,6 +101,8 @@ export default defineConfig((mode: ConfigEnv) => {
             '@/helper/pinia-auto-refs': ['useStore'],
           },
         ],
+        // Enable auto import by filename for default module exports under directories
+        defaultExportByFilename: false,
 
         resolvers: [
           // Auto import UI components
@@ -109,15 +117,16 @@ export default defineConfig((mode: ConfigEnv) => {
           // 自动导入Onu UI组件
           OnuResolver(),
         ],
-        dts: true,
+        dts: './auto-imports.d.ts',
         dirs: [
           './src/components',
           './src/store',
           './src/composables',
         ],
         vueTemplate: true,
+        injectAtEnd: true,
         eslintrc: {
-          enabled: false, // Default `false`
+          enabled: true, // Default `false`
           filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
           globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
         },
