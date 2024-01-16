@@ -6,12 +6,13 @@ import { defineConfig } from 'vite'
 import type { CommonServerOptions, ConfigEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
-import Pages from 'vite-plugin-pages'
 import AutoImport from 'unplugin-auto-import/vite'
 import PiniaAutoRefs from 'pinia-auto-refs'
 import Components from 'unplugin-vue-components/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import VueMacros from 'unplugin-vue-macros/vite'
+import VueRouter from 'unplugin-vue-router/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import VueDevtools from 'vite-plugin-vue-devtools'
@@ -74,8 +75,8 @@ export default defineConfig((mode: ConfigEnv) => {
       // https://github.com/depazer/depazer
       depazer(),
 
-      // https://github.com/hannoeru/vite-plugin-pages
-      Pages(),
+      // https://github.com/posva/unplugin-vue-router
+      VueRouter(),
 
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
@@ -88,8 +89,8 @@ export default defineConfig((mode: ConfigEnv) => {
         imports: [
           'vue',
           'pinia',
-          'vue-router',
           '@vueuse/core',
+          VueRouterAutoImports,
           {
             alova: [
               'useRequest',
@@ -99,6 +100,7 @@ export default defineConfig((mode: ConfigEnv) => {
           },
           {
             '@/helper/pinia-auto-refs': ['useStore'],
+            'vue-router/auto': ['useLink'],
           },
         ],
         // Enable auto import by filename for default module exports under directories
