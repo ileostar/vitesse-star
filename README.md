@@ -143,8 +143,8 @@ pnpm dev
 ├── package.json          // 项目依赖配置文件
 ├── shims.d.ts            // 声明文件
 ├── README.md             // 项目说明文件
-├── tsconfig.ts           // TS配置文件
-├── tsconfig.node.ts      // TS-Node配置文件
+├── tsconfig.json         // TS配置文件
+├── tsconfig.node.json    // TS-Node配置文件
 ├── uno.config.ts         // ESLint配置文件
 └── vite.config.ts        // Vite项目配置文件
 ```

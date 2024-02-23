@@ -21,7 +21,7 @@
     "commit": "git add . && git-cz",
     "push": "git push",
     "prepare": "husky install",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "fix": "eslint src/**/*.*  --fix",
     "style": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
     "up": "taze major -I"
