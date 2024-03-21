@@ -12,7 +12,8 @@
     "types": [
       "vite/client",
       "@alova/adapter-axios",
-      "unplugin-vue-macros/macros-global"
+      "unplugin-vue-macros/macros-global",
+      "unplugin-vue-router/client"
     ],
     "resolveJsonModule": true,
     "allowJs": true,
@@ -23,8 +24,7 @@
     "noUnusedLocals": true,
     "skipLibCheck": true
   },
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/*.ts", "types/*.d.ts"],
   "exclude": [
     "dist",
     "node_modules"
