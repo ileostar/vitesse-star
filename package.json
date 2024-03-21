@@ -15,7 +15,7 @@
     "build:dev": "vue-tsc --noEmit && vite build",
     "build:pro": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "vitest --mode development",
     "typecheck": "vue-tsc --noEmit",
     "commit": "git add . && git-cz",
     "push": "git push",
