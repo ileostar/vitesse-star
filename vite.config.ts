@@ -124,7 +124,7 @@ export default defineConfig((mode: ConfigEnv) => {
           './src/composables',
         ],
         vueTemplate: true,
-        injectAtEnd: true
+        injectAtEnd: true,
 
       }),
 
