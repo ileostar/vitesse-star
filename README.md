@@ -26,7 +26,6 @@
 - 🙈使用 Alova 实现网络请求
 - 🍍使用 Pinia 进行状态管理
 - 📌使用 husky、lint-staged 规范git commit
-- 🍉使用 dezaper 分析依赖库
 
 ## 📚学习
 
@@ -38,11 +37,10 @@
 ### 插件
 
 - [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
-- [vite-plugin-pages](https://github.com/posva/vite-plugin-pages)
+- [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)
 - [vite-plugin-components](https://github.com/antfu/vite-plugin-components)
 - [vite-plugin-vue-devtools](https://github.com/webfansplz/vite-plugin-vue-devtools)
 - [pinia-auto-refs](https://github.com/Allen-1998/pinia-auto-refs)
-- [dezaper](https://github.com/depazer/depazer)
 
 ### 状态管理
 
@@ -175,7 +173,7 @@ pnpm dev
 
 ## 🎇配置路由
 
-该项目使用  vite-plugin-pages 插件来自动生成路由配置。详细的使用方法请参考插件文档。
+该项目使用  unplugin-vue-router 插件来自动生成路由配置。详细的使用方法请参考插件文档。
 
 ## 🐹自动引入
 
@@ -208,12 +206,6 @@ const { updateName } = userStore
 ```ts
 const { name, token, fullName, updateName } = useStore('user')
 ```
-
-## 🍉依赖分析
-
-该项目使用 depazer 进行依赖分析，可视化依赖库，方便学习。
-
-项目启动后可以<http://localhost:3891/__depazer>查看当前项目依赖。
 
 ## 🐛运行测试
 

@@ -17,7 +17,6 @@ import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
 import VueDevtools from 'vite-plugin-vue-devtools'
 import { OnuResolver } from 'onu-ui'
-import depazer from '@depazer/vite'
 import ViteRestart from 'vite-plugin-restart'
 import type { DotenvParseOutput } from 'dotenv'
 import dotenv from 'dotenv'
@@ -47,7 +46,7 @@ export default defineConfig((mode: ConfigEnv) => {
       alias: {
         '@/': `${path.resolve(__dirname, 'src')}/`,
       },
-      extensions: ['.js', '.json', '.ts'],
+      extensions: ['.js', '.json', '.ts', '.vue'],
     },
     plugins: [
     // https://github.com/vue-macros/vue-macros
@@ -71,9 +70,6 @@ export default defineConfig((mode: ConfigEnv) => {
       }),
 
       VueDevtools(),
-
-      // https://github.com/depazer/depazer
-      depazer(),
 
       // https://github.com/posva/unplugin-vue-router
       VueRouter({
@@ -128,12 +124,7 @@ export default defineConfig((mode: ConfigEnv) => {
           './src/composables',
         ],
         vueTemplate: true,
-        injectAtEnd: true,
-        eslintrc: {
-          enabled: true, // Default `false`
-          filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
-          globalsPropValue: true, // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
-        },
+        injectAtEnd: true
 
       }),
 
