@@ -18,6 +18,7 @@ function go(): void {
   if (name.value)
     router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
+
 </script>
 
 <template>
