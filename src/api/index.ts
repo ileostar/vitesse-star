@@ -13,7 +13,7 @@ export const instance = createAlova({
   timeout: 50000,
   beforeRequest(method) { // 这里设置请求拦截器
     // 请求头中添加Authorization认证信息
-    method.config.headers['Authorization'] = localStorage.getItem('Authorization') ?? ''
+    method.config.headers.Authorization = localStorage.getItem('Authorization') ?? ''
   },
   responded: { // 这里设置响应拦截器
     onSuccess: async (response, _method) => {

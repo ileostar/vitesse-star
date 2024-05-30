@@ -23,6 +23,7 @@
 - 👀使用 Onu UI，一个基于UnoCSS的UI组件库
 - 🍀集成 Vitest，用于项目的单元测试
 - 🧰使用 VueUse 函数库辅助开发
+- 💀使用 v3-directives 指令库辅助开发
 - 🙈使用 Alova 实现网络请求
 - 🍍使用 Pinia 进行状态管理
 - 📌使用 husky、lint-staged 规范git commit
@@ -58,6 +59,7 @@
 ### 工具函数
 
 - [VueUse中文文档 | VueUse中文文档 (vueusejs.com)](http://www.vueusejs.com/)
+- [v3-directives 自定义指令库](https://github.com/ileostar/v3-directives)
 
 ### 规范相关
 
@@ -80,25 +82,25 @@
 
 克隆项目到本地：
 
-``` bash
+```bash
 npx degit ileostar/vitesse-star 你的项目名称  # If there is no npx, npm i -g npx first
 ```
 
 进入项目目录：
 
-``` bash
+```bash
 cd 你的项目名称
 ```
 
 安装依赖：
 
-``` bash
+```bash
 pnpm install # If there is no pnpm, npm i -g pnpm first
 ```
 
 启动开发服务器：
 
-``` bash
+```bash
 pnpm dev
 ```
 
@@ -126,18 +128,17 @@ pnpm dev
 │   ├── App.vue           // 根组件
 │   └── main.ts           // 项目入口文件
 ├── test                  // 单元测试
+├── types                 // 类型文件
 ├── .editorconfig         // IDE配置文件
 ├── .gitignore            // git忽略文件
 ├── .npmrc                // npm管理配置
 ├── .stylelintrc.json     // stylelintrc文件
 ├── .env                  // 配置环境
-├── .env.pro              // 生产配置环境
-├── .env.dev              // 开发配置环境
+├── .env.production       // 生产配置环境
+├── .env.development      // 开发配置环境
 ├── index.html            // 项目页面入口
-├── myenv.d.ts            // 环境声明文件
 ├── netlify.toml          // netlify部署配置
-├── .eslintignore         // ESLint忽略文件
-├── .eslintrc.json        // ESLint配置文件
+├── eslint.config.mjs     // ESLint配置文件
 ├── package.json          // 项目依赖配置文件
 ├── shims.d.ts            // 声明文件
 ├── README.md             // 项目说明文件
@@ -151,19 +152,19 @@ pnpm dev
 
 ### 读取配置
 
-默认读取顺序`.env.dev/.env.pro > .env`
+默认读取顺序`.env.development/.env.production > .env`
 
-开发环境下可以在`.env.dev`修改需要配置
+开发环境下可以在`.env.development`修改需要配置
 
-生成环境下可以在`.env.pro`修改需要配置
+生成环境下可以在`.env.production`修改需要配置
 
 ### 添加配置项
 
-需要以VITE开头，如果在src中用可以使用`import.meta.env.<配置项>`,在`vite.config.ts`中用，这里用的是`dotenv`读取文件，需要在`./myenv.d.ts`文件下添加TS接口，才会有提示。
+需要以VITE开头，如果在src中用可以使用`import.meta.env.<配置项>`
 
 ## 🤖代码规范
 
-该项目使用 ESLint 来保证代码规范一致性。你可以在 .eslintrc.json 文件中查看相关配置。在提交代码时，将会自动进行代码规范检查。
+该项目使用 ESLint 来保证代码规范一致性。你可以在 eslint.config.mjs 文件中查看相关配置。在提交代码时，将会自动进行代码规范检查。
 
 ## 🌐网络请求Alova
 
@@ -173,7 +174,7 @@ pnpm dev
 
 ## 🎇配置路由
 
-该项目使用  unplugin-vue-router 插件来自动生成路由配置。详细的使用方法请参考插件文档。
+该项目使用 unplugin-vue-router 插件来自动生成路由配置。详细的使用方法请参考插件文档。
 
 ## 🐹自动引入
 
@@ -183,7 +184,7 @@ pnpm dev
 
 ### 自动引入组件
 
-该项目使用 vite-plugin-components 插件来实现组件的自动引入，**即定义组件直接使用即可，无需手动引入**，你可以在 vite.config.ts 中修改自动引入的规则和配置。
+该项目使用 unplugin-vue-components 插件来实现组件的自动引入，**即定义组件直接使用即可，无需手动引入**，你可以在 vite.config.ts 中修改自动引入的规则和配置。
 
 ## 🍍状态管理
 
