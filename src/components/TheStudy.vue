@@ -2,7 +2,7 @@
   <nav mt-6 inline-flex gap-2 text-xl>
     <div flex="~ items-center" m-t-20 justify-center class="logo-link">
       <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo" alt="Vite logo">
+        <img src="@/assets/images/vite.svg" class="logo" alt="Vite logo">
       </a>
       <a href="https://vuejs.org/" target="_blank">
         <img src="@/assets/images/vue.svg" class="logo vue" alt="Vue logo">

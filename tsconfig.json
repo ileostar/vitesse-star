@@ -1,27 +1,27 @@
 {
   "compilerOptions": {
     "target": "ES2016",
-    "lib": ["DOM", "ESNext"],
     "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
+    "resolveJsonModule": true,
     "types": [
       "vite/client",
       "@alova/adapter-axios",
       "unplugin-vue-macros/macros-global",
       "unplugin-vue-router/client"
     ],
-    "resolveJsonModule": true,
     "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/*.ts", "types/*.d.ts"],

@@ -1,9 +1,0 @@
-{
-  "extends": [
-    "@ileostar",
-    "@unocss"
-  ],
-  "plugins": [
-    "@unocss"
-  ]
-}
