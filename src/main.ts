@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router/auto'
+import { routes } from 'vue-router/auto-routes'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import OnuUI from 'onu-ui'
 import App from './App.vue'
@@ -13,6 +14,7 @@ const app = createApp(App)
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  routes:routes
 })
 store.use(piniaPluginPersistedstate)
 app.use(router)

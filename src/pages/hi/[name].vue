@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const props = defineProps<{ name: string }>()
 const router = useRouter()
 const { updateCount, count } = useStore('home')
 </script>
@@ -8,7 +7,7 @@ const { updateCount, count } = useStore('home')
   <div>
     <div i-twemoji-alien inline-block text-4xl />
     <p>
-      Hi, {{ props.name }}
+      Hi,  {{ $route.params.name }}
     </p>
     <p>{{ count }}</p>
     <p text-sm op50>
