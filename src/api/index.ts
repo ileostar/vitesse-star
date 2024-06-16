@@ -1,8 +1,7 @@
-// 案例学习：https://alova.js.org/zh-CN/tutorial/best-practice/method-manage
+// 案例学习：https://alova.js.org/zh-CN/tutorial/best-practice/manage-apis
 import type { AlovaMethodCreateConfig, Method } from 'alova'
 import { createAlova } from 'alova'
 import VueHook from 'alova/vue'
-import type { FetchRequestInit } from 'alova/GlobalFetch'
 import GlobalFetch from 'alova/GlobalFetch'
 
 // create alova instance
@@ -16,7 +15,7 @@ export const instance = createAlova({
     method.config.headers.Authorization = localStorage.getItem('Authorization') ?? ''
   },
   responded: { // 这里设置响应拦截器
-    onSuccess: async (response, _method) => {
+    onSuccess: async (response: { status: number; statusText: string | undefined; json: () => any }, _method: any) => {
       if (response.status >= 400)
         throw new Error(response.statusText)
 
@@ -43,7 +42,7 @@ export const instance = createAlova({
 interface Data {
   [index: string]: unknown
 }
-type Config = AlovaMethodCreateConfig<unknown, unknown, FetchRequestInit, Headers> | undefined
+type Config = AlovaMethodCreateConfig<unknown, unknown, RequestInit, Headers> | undefined
 
 interface Http {
   get: (
